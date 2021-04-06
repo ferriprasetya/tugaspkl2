@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas HTML 2</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        color: #333;
+        background-color: rgb(233, 233, 233);
+      }
+      .tabel table {
+        border-collapse: collapse;
+        margin: auto;
+        border: 1px solid #333;
+      }
+      .tabel {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+      }
+      thead th {
+        color: white;
+      }
+      tbody {
+        background-color: #fff;
+      }
+      .formulir {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        background-color: #fff;
+        width: 70vw;
+        padding: 20px;
+      }
+      .formulir form {
+        font-size: 1.2em;
+      }
+      input {
+        border: 1px bold #666;
+        width: 90%;
+        font-size: 14px;
+        padding: 8px;
+        font-weight: 200;
+        margin: 10px;
+      }
+      input:focus {
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+        transition: 180ms box-shadow ease-in-out;
+      }
+      input[type="checkbox"]:focus,
+      input[type="radio"]:focus,
+      input[type="range"]:focus {
+        box-shadow: none;
+      }
+      input[type="checkbox"],
+      input[type="radio"],
+      input[type="button"],
+      input[type="submit"],
+      input[type="image"] {
+        width: auto;
+      }
+      .btn-img {
+        display: flex;
+        justify-content: center;
+      }
+      #reset,
+      #submit {
+        border: none;
+        background-color: #0d6efd;
+        border-radius: 3px;
+        height: 30px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabel">
+      <h1 align="center">Tabel Data Diri</h1>
+      <table border="1" cellpadding="10">
+        <thead bgcolor="#0d6efd">
+          <th colspan="4">Data Diri</th>
+          <th rowspan="2">Foto</th>
+          <tr bgcolor="#3480f1">
+            <th width="100px">Nama</th>
+            <th width="100px">Absen</th>
+            <th width="100px">Nomor Induk</th>
+            <th width="100px">Kelas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ferri</td>
+            <td>19</td>
+            <td>10265</td>
+            <td>TKJ</td>
+            <td>
+              <img
+                width="200px"
+                src="https://github.com/AytesarpIrref/tugaspkl1/blob/main/img/me.jpg?raw=true"
+                alt="ferri.jpg"
+              />
+            </td>
+          </tr>
+          <tr height="200px">
+            <td>Adi</td>
+            <td>20</td>
+            <td>10266</td>
+            <td>MM</td>
+            <td><img src="" alt="adi.jpg" /></td>
+          </tr>
+          <tr>
+            <td>Prasetya</td>
+            <td>21</td>
+            <td>10267</td>
+            <td>TBG</td>
+            <td><img src="prasetya.jpg" alt="prasetya.jpg" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="formulir">
+      <h1 align="center">Formulir Pendaftaran Mahasiswa Baru</h1>
+      <form action="" method="POST">
+        <table width="100%">
+          <tr>
+            <td width="200px"><label for="nama">Nama</label></td>
+            <td>
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                placeholder="Masukkan nama anda"
+                autofocus
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="alamat">Alamat</label></td>
+            <td>
+              <input
+                type="text"
+                id="alamat"
+                name="alamat"
+                placeholder="Masukkan alamat anda"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="umur">Umur</label></td>
+            <td>
+              <input
+                type="number"
+                id="umur"
+                name="umur"
+                placeholder="Masukkan umur anda"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">Email</label></td>
+            <td>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Masukkan email anda"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="password">Password</label></td>
+            <td>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Masukkan password email anda"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="hidden"
+                id="password2"
+                name="password2"
+                placeholder="Hidden password"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="tel">Telepon</label></td>
+            <td>
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                placeholder="Masukkan nomor telepon anda"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="url">Link Portfolio</label></td>
+            <td>
+              <input
+                type="url"
+                id="url"
+                name="url"
+                placeholder="Masukkan link portfolio anda"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="file">Berkas</label></td>
+            <td>
+              <input
+                type="file"
+                id="file"
+                name="file"
+                placeholder="Masukkan berkas anda"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="hobi">Hobi</label></td>
+            <td>
+              <input type="checkbox" name="hobi" value="1" />
+              Membaca<br />
+              <input type="checkbox" name="hobi" value="2" />
+              Bermain Game<br />
+              <input type="checkbox" name="hobi" value="3" />
+              Menggambar<br />
+              <input type="checkbox" name="hobi" value="4" />
+              Bernyanyi<br />
+              <input type="checkbox" name="hobi" value="5" />
+              Rebahan<br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="lahir">Tanggal Lahir</label></td>
+            <td><input type="date" name="lahir" id="lahir" /></td>
+          </tr>
+          <tr>
+            <td><label for="bulan">Kelulusan</label></td>
+            <td><input type="month" name="bulan" id="bulan" /></td>
+          </tr>
+          <tr>
+            <td><label for="time">Jam Tes</label></td>
+            <td><input type="time" name="time" id="time" /></td>
+          </tr>
+          <tr>
+            <td><label for="week">Minggu Ujian</label></td>
+            <td><input type="week" name="week" id="week" /></td>
+          </tr>
+          <tr>
+            <td><label for="datetime-local">Waktu Pengisian</label></td>
+            <td>
+              <input
+                type="datetime-local"
+                name="datetime-local"
+                id="datetime-local"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="textarea">Alasan</label></td>
+            <td>
+              <textarea
+                name="textarea"
+                id="textarea"
+                cols="30"
+                rows="2"
+                placeholder="Jelaskan alasan anda memilih Universitas ini"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="minat">Minat</label></td>
+            <td>
+              <select name="minat">
+                <option value="" selected>--Minat--</option>
+                <option value="1">Komputer</option>
+                <option value="2">Kesehatan</option>
+                <option value="3">Politik</option>
+                <option value="4">Seni</option>
+                <option value="5">Pengetahuan</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="color">Warna Kesukaan</label></td>
+            <td><input type="color" name="color" id="color" /></td>
+          </tr>
+          <tr>
+            <td><label for="radio">Yakin Untuk Mendaftar?</label></td>
+            <td>
+              <input type="radio" name="radio" id="radio" />Ya<br />
+              <input type="radio" name="radio" id="radio" />Ragu-ragu<br />
+              <input type="radio" name="radio" id="radio" />Tidak
+            </td>
+          </tr>
+          <tr>
+            <td><label for="range">Seberapa Yakin Untuk Mendaftar</label></td>
+            <td><input type="range" name="range" id="range" /></td>
+          </tr>
+          <tr>
+            <td><label for="search">Cari Jurusan</label></td>
+            <td>
+              <input type="search" name="search" id="search" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="reset"
+                name="reset"
+                id="reset"
+                value="Klik untuk reset"
+              />
+            </td>
+            <td>
+              <input
+                type="submit"
+                name="submit"
+                id="submit"
+                value="Klik untuk submit"
+              />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <h2 align="center">
+      Setelah mengisi formulir di atas, bagaimana perasaan anda?
+    </h2>
+    <div class="btn-img">
+      <input type="button" name="button" id="button" value="Senang" />
+      <input
+        type="image"
+        name="image"
+        id="image"
+        src="https://wprock.fr/wp-content/themes/wprock-theme/img/emoji/joypixels/512/1f622.png"
+        width="40px"
+        height="40px"
+      />
+    </div>
+  </body>
+</html>
